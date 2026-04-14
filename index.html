@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do1Ruky | Modrokuk</title>
+  <meta
+    name="description"
+    content="Jedna webová prezentace pro catering Modrokuk a food truck Do1Ruky, která automaticky přepíná obsah podle domény."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page page--home">
+  <header class="hero hero--immersive">
+    <img class="hero__image hero__image--bg" id="hero-image" src="assets/do1ruky-hero.svg" alt="Grafika značky">
+    <div class="hero__overlay"></div>
+
+    <div class="page-shell page-shell--wide">
+      <div class="hero__badge" id="domain-badge">Aktivní doména</div>
+
+      <nav class="topbar topbar--overlay">
+        <div class="brand-lockup">
+          <span class="brand-lockup__dot"></span>
+          <img class="brand-lockup__logo" id="brand-logo" src="" alt="">
+          <span class="brand-lockup__name" id="brand-name">Načítání</span>
+        </div>
+
+        <div class="topbar__actions">
+          <a class="topbar__navlink" href="#onas">O nás</a>
+          <a class="topbar__navlink" href="#sluzby">Služby</a>
+          <a class="topbar__navlink" href="#akce">Akce</a>
+          <a class="topbar__navlink" href="#reference">Reference</a>
+          <div class="brand-switch" aria-label="Výběr značky">
+            <button class="brand-switch__button" id="switch-do1ruky" type="button">Do1Ruky</button>
+            <button class="brand-switch__button" id="switch-modrokuk" type="button">Modrokuk</button>
+          </div>
+          <a class="topbar__link" data-brand-link="contact" href="kontakt.html">Kontakt</a>
+        </div>
+      </nav>
+
+      <div class="hero__stage">
+        <div class="hero__copy hero__copy--centered">
+          <p class="eyebrow" id="eyebrow">Web na míru</p>
+          <h1 id="headline">Jeden gastro základ pro dvě odlišné služby.</h1>
+          <p class="hero__text" id="hero-text">
+            Tento základ automaticky přepíná obsah podle domény a umožní spravovat cateringovou službu i food truck z jednoho webového řešení.
+          </p>
+
+          <div class="hero__actions hero__actions--centered">
+            <a class="button button--primary" id="primary-cta" href="#poptavka">Zjistit více</a>
+            <a class="button button--ghost" href="#onas">O nás</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-flow">
+    <div class="page-shell page-shell--narrow">
+      <section class="section section--intro" id="onas">
+        <p class="section__label">O nás</p>
+        <h2 class="section__title" id="about-title">Nejsme klasický catering.</h2>
+        <div class="section__copy" id="about-text"></div>
+      </section>
+
+      <section class="feature-panel">
+        <div class="feature-panel__text">
+          <p class="section__label">Přístup</p>
+          <h2 class="section__title" id="card-title">Automatické rozpoznání domény</h2>
+          <p class="feature-panel__copy" id="card-text">
+            Po otevření `do1ruky.cz` nebo `modrokuk.cz` se návštěvníkovi zobrazí správná verze webu bez potřeby spravovat dva oddělené projekty.
+          </p>
+        </div>
+        <div class="feature-panel__visual">
+          <div class="feature-panel__visual-frame">
+            <img class="feature-panel__preview" id="feature-preview" src="assets/modrokuk-hero.svg" alt="Náhled služby">
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sluzby">
+        <p class="section__label">Co děláme</p>
+        <h2 class="section__title" id="services-title">Služby</h2>
+        <div class="cards" id="services-list"></div>
+      </section>
+
+      <section class="section" id="akce">
+        <p class="section__label">Pro jaké akce</p>
+        <h2 class="section__title" id="events-title">Akce</h2>
+        <div class="cards cards--compact" id="events-list"></div>
+        <p class="section__footnote" id="events-note"></p>
+      </section>
+
+      <section class="feature-panel feature-panel--soft" id="procmy">
+        <div class="feature-panel__text">
+          <p class="section__label">Proč my</p>
+          <h2 class="section__title" id="reasons-title">Proč zvolit právě nás</h2>
+          <div class="cards cards--stacked" id="reasons-list"></div>
+        </div>
+      </section>
+
+      <section class="section" id="galerie">
+        <p class="section__label">Galerie</p>
+        <h2 class="section__title" id="gallery-title">Podívejte se, jak to vypadá v akci.</h2>
+        <div class="gallery-panel">
+          <p class="gallery-panel__text" id="gallery-text"></p>
+        </div>
+      </section>
+
+      <section class="section" id="reference">
+        <p class="section__label">Reference</p>
+        <h2 class="section__title" id="references-title">Co o nás říkají</h2>
+        <div class="cards cards--quotes" id="references-list"></div>
+      </section>
+
+      <section class="feature-panel feature-panel--cta" id="poptavka">
+        <div class="feature-panel__text">
+          <p class="section__label">Poptávka</p>
+          <h2 class="section__title" id="inquiry-title">Chcete nabídku?</h2>
+          <p class="feature-panel__copy" id="inquiry-text"></p>
+          <div class="inquiry-panel__items" id="inquiry-items"></div>
+          <p class="inquiry-panel__note" id="inquiry-note"></p>
+          <div class="hero__actions">
+            <a class="button button--primary" data-brand-link="contact" href="kontakt.html">Vyplnit formulář</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

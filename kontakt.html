@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | Do1Ruky | Modrokuk</title>
+  <meta
+    name="description"
+    content="Samostatná kontaktní stránka pro catering Modrokuk a food truck Do1Ruky."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page page--contact">
+  <header class="hero hero--immersive hero--contact">
+    <img class="hero__image hero__image--bg" id="hero-image" src="assets/do1ruky-hero.svg" alt="Grafika značky">
+    <div class="hero__overlay"></div>
+
+    <div class="page-shell page-shell--wide">
+      <div class="hero__badge" id="domain-badge">Aktivní doména</div>
+
+      <nav class="topbar topbar--overlay">
+        <div class="brand-lockup">
+          <span class="brand-lockup__dot"></span>
+          <img class="brand-lockup__logo" id="brand-logo" src="" alt="">
+          <span class="brand-lockup__name" id="brand-name">Načítání</span>
+        </div>
+
+        <div class="topbar__actions">
+          <div class="brand-switch" aria-label="Výběr značky">
+            <button class="brand-switch__button" id="switch-do1ruky" type="button">Do1Ruky</button>
+            <button class="brand-switch__button" id="switch-modrokuk" type="button">Modrokuk</button>
+          </div>
+          <a class="topbar__link" data-brand-link="home" href="index.html">Domů</a>
+        </div>
+      </nav>
+
+      <div class="hero__stage hero__stage--contact">
+        <div class="hero__copy hero__copy--centered">
+          <p class="eyebrow">Kontakt</p>
+          <h1 class="contact-hero__title">Spojme se nad vaší akcí.</h1>
+          <p class="hero__text" id="contact-page-text">
+            Vyberte si značku a zobrazí se odpovídající kontaktní údaje i tón komunikace.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-flow">
+    <div class="page-shell page-shell--narrow">
+      <section class="feature-panel feature-panel--contact-summary">
+        <div class="feature-panel__text">
+          <p class="section__label">Jak nás oslovit</p>
+          <h2 class="section__title" id="contact-page-heading">Kontakt pro rychlou poptávku</h2>
+          <div class="contact-summary">
+            <div class="contact-summary__item">
+              <span class="contact-summary__label">Značka</span>
+              <p class="contact-panel__brand" id="contact-brand">Do1Ruky</p>
+            </div>
+            <div class="contact-summary__item">
+              <span class="contact-summary__label">E-mail</span>
+              <p id="contact-email">info@do1ruky.cz</p>
+            </div>
+            <div class="contact-summary__item">
+              <span class="contact-summary__label">Telefon</span>
+              <p id="contact-phone">+420 000 000 000</p>
+            </div>
+            <div class="contact-summary__item">
+              <span class="contact-summary__label">Typ poptávky</span>
+              <p id="contact-service-detail">Food truck na akce, festivaly a soukromé oslavy.</p>
+            </div>
+          </div>
+        </div>
+        <div class="feature-panel__visual">
+          <div class="contact-cta-box">
+            <p class="contact-cta-box__eyebrow">Přímý kontakt</p>
+            <a class="button button--primary" id="contact-cta" href="mailto:info@do1ruky.cz">Napsat e-mail</a>
+            <p class="contact-cta-box__text" id="contact-email-detail">info@do1ruky.cz</p>
+            <p class="contact-cta-box__text" id="contact-phone-detail">+420 000 000 000</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--form" id="formular">
+        <p class="section__label">Nezávazná poptávka</p>
+        <h2 class="section__title" id="form-title">Pošlete nám základní zadání</h2>
+        <form class="inquiry-form inquiry-form--full">
+          <label class="form-field">
+            <span>Typ akce</span>
+            <input type="text" name="event_type" placeholder="Např. svatba, festival, firemní večírek">
+          </label>
+          <label class="form-field">
+            <span>Počet lidí</span>
+            <input type="number" name="guest_count" placeholder="Např. 80">
+          </label>
+          <label class="form-field">
+            <span>Místo a termín</span>
+            <input type="text" name="place_date" placeholder="Např. Brno, 12. 7. 2026">
+          </label>
+          <label class="form-field">
+            <span>Telefon</span>
+            <input type="tel" name="phone" placeholder="Např. +420 777 000 000">
+          </label>
+          <label class="form-field form-field--full">
+            <span>Upřesnění</span>
+            <textarea name="details" rows="6" placeholder="Napište nám stručně, co potřebujete"></textarea>
+          </label>
+          <button class="button button--primary" type="submit">Odeslat nezávaznou poptávku</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
