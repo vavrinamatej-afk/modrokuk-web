@@ -124,7 +124,7 @@ const siteConfigs = {
       "Flexibilita podle akce",
     ],
     galleryTitle: "Podívejte se, jak má catering vypadat.",
-    galleryText: "Reálné akce. Reálné jídlo.",
+    galleryText: "",
     galleryImages: [
       { src: "Catering/pexels-dmitry-sidorov-2775764-7015880.jpg", alt: "Cateringový detail z akce" },
       { src: "Catering/pexels-mariia-ivanova-449384027-19123614.jpg", alt: "Servírované občerstvení na eventu" },
@@ -158,7 +158,7 @@ const siteConfigs = {
     contactServiceDetail: "Catering na míru, kompletní servis a občerstvení pro různé typy akcí.",
     heroImage: "pexels-novkov-visuals-34321380.jpg",
     heroImageAlt: "Hero fotografie cateringu Modrokuk",
-    featureImage: "Louka-29.jpg",
+    featureImage: "Catering/catering3.jpg",
     featureImageAlt: "Fotografie cateringu Modrokuk",
     accent: "#0e6f8a",
     accentDark: "#0a4f63",

@@ -32,10 +32,12 @@
         </div>
 
         <div class="topbar__actions">
-          <a class="topbar__navlink" href="#onas">O nás</a>
-          <a class="topbar__navlink" href="#sluzby">Služby</a>
-          <a class="topbar__navlink" href="#akce">Akce</a>
-          <a class="topbar__navlink" href="#reference">Reference</a>
+          <div class="topbar__navbubble">
+            <a class="topbar__navlink" href="#onas">O nás</a>
+            <a class="topbar__navlink" href="#sluzby">Služby</a>
+            <a class="topbar__navlink" href="#akce">Akce</a>
+            <a class="topbar__navlink" href="#galerie">Galerie</a>
+          </div>
           <div class="brand-switch" aria-label="Výběr značky">
             <button class="brand-switch__button" id="switch-do1ruky" type="button">Do1Ruky</button>
             <button class="brand-switch__button" id="switch-modrokuk" type="button">Modrokuk</button>
@@ -64,9 +66,8 @@
   <main class="content-flow">
     <div class="page-shell page-shell--narrow">
       <section class="section section--intro" id="onas">
-        <p class="section__label">O nás</p>
         <h2 class="section__title" id="about-title">Nejsme klasický catering.</h2>
-        <div class="section__copy" id="about-text"></div>
+        <div class="section__copy section__copy--boxed" id="about-text"></div>
       </section>
 
       <section class="feature-panel">
