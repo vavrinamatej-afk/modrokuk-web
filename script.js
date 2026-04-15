@@ -98,7 +98,7 @@ const siteConfigs = {
         <li><strong>Lidský přístup:</strong> Gastronomie je o lidech. Jednáme narovinu, profesionálně a s úsměvem.</li>
       </ul>
     `,
-    aboutTitle: "O Nás",
+    aboutTitle: "O nás",
     aboutParagraphs: [
       "Jsme profesionálové, kteří gastronomií žijí. Naše cesta začala před více než 20 lety v prostředí restaurací, kde jsme se naučili, že v detailu je rozdíl.",
       "Dnes tyto zkušenosti přenášíme do světa cateringu, kde klademe důraz na dvě věci: špičkovou kvalitu surovin a precizní skladbu každého chodu.",
