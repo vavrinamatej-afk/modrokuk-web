@@ -264,9 +264,19 @@ a {
 .inquiry-panel__note,
 .inquiry-panel__items,
 .contact-summary__item p,
-.contact-cta-box__text {
+.contact-cta-box__text,
+.feature-panel__list li {
   line-height: 1.7;
   color: var(--muted);
+}
+
+.feature-panel__list {
+  margin: 18px 0 0;
+  padding-left: 20px;
+}
+
+.feature-panel__list li + li {
+  margin-top: 10px;
 }
 
 .hero__text {

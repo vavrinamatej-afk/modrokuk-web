@@ -88,14 +88,22 @@ const siteConfigs = {
     primaryCta: "Nezávazná poptávka",
     primaryCtaHref: "kontakt.html?brand=modrokuk.cz#formular",
     cardTitle: "Kompletní catering bez zdržování",
-    cardText:
-      "Jídlo, servis i organizace tak, aby akce běžela hladce a hosté si catering opravdu zapamatovali.",
+    cardText: `
+      <ul class="feature-panel__list">
+        <li><strong>Preciznost:</strong> Dohlížíme na vše od chuti jídla až po jeho servírování. Nic nenecháváme náhodě.</li>
+        <li><strong>Organizace a spolehlivost:</strong> Máme za sebou stovky akcí. Víme, jak naplánovat hladký průběh, aby vše klaplo na minutu.</li>
+        <li><strong>Rychlé jednání:</strong> Reagujeme obratem. Šetříme váš čas efektivní domluvou bez zbytečného papírování.</li>
+        <li><strong>Individuální přístup:</strong> Nasloucháme tomu, co od akce čekáte, a menu i servis přizpůsobíme vaší představě.</li>
+        <li><strong>Kvalitní suroviny:</strong> Vaříme z čerstvých a prověřených surovin. Na kvalitě základních ingrediencí nešetříme.</li>
+        <li><strong>Lidský přístup:</strong> Gastronomie je o lidech. Jednáme narovinu, profesionálně a s úsměvem.</li>
+      </ul>
+    `,
     aboutTitle: "Nejsme klasický catering.",
     aboutParagraphs: [
-      "Nezdržujeme, nekomplikujeme.",
-      "Děláme jídlo, které chutná, dobře vypadá a hlavně funguje na akci.",
-      "Když má být akce dobrá, jídlo musí být bez kompromisů.",
-      "A přesně to dodáváme.",
+      "Jsme profesionálové, kteří gastronomií žijí. Naše cesta začala před více než 20 lety v prostředí restaurací, kde jsme se naučili, že v detailu je rozdíl.",
+      "Dnes tyto zkušenosti přenášíme do světa cateringu, kde klademe důraz na dvě věci: špičkovou kvalitu surovin a precizní skladbu každého chodu.",
+      "Nehledáme zkratky. Každé menu sestavujeme tak, aby dávalo smysl chutí i vzhledem.",
+      "Chceme pro své klienty to nejlepší – od prvního kontaktu až po poslední sousto na vašem talíři. Vaše spokojenost je pro nás závazek, který plníme s maximálním nasazením.",
     ],
     servicesTitle: "Co děláme",
     services: [
@@ -250,6 +258,13 @@ const assignText = (id, value) => {
   }
 };
 
+const assignHtml = (id, value) => {
+  const node = document.getElementById(id);
+  if (node) {
+    node.innerHTML = value;
+  }
+};
+
 const setActiveBrandButton = (configKey) => {
   if (brandButtons.do1ruky) {
     brandButtons.do1ruky.classList.toggle("is-active", configKey === "do1ruky.cz");
@@ -355,7 +370,7 @@ const applyConfig = (configKey) => {
   assignText("headline", config.headline);
   assignText("hero-text", config.heroText);
   assignText("card-title", config.cardTitle);
-  assignText("card-text", config.cardText);
+  assignHtml("card-text", config.cardText);
   assignText("about-title", config.aboutTitle);
   assignText("services-title", config.servicesTitle);
   assignText("events-title", config.eventsTitle);
