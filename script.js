@@ -82,9 +82,9 @@ const siteConfigs = {
     brand: "Modrokuk",
     badge: "Aktivní doména: modrokuk.cz",
     eyebrow: "Modrokuk Catering",
-    headline: "Žádný průměr. Jen jídlo, které si hosté zapamatují.",
+    headline: "Tvoříme chutě, které  měníme v zážitek",
     heroText:
-      "Postaráme se o catering, který funguje – rychle, bez chaosu a na úrovni.",
+      "Užijte si svou akci, o zbytek se postaráme my.",
     primaryCta: "Nezávazná poptávka",
     primaryCtaHref: "kontakt.html?brand=modrokuk.cz#formular",
     cardTitle: "Kompletní catering bez zdržování",
@@ -112,9 +112,9 @@ const siteConfigs = {
         text: "Čisté, přehledné, funkční. Jídlo, které hosté opravdu chtějí jíst.",
       },
     ],
-    eventsTitle: "Pro jaké akce",
-    events: ["Firemní akce", "Festivaly", "Svatby", "Soukromé oslavy"],
-    eventsNote: "Malá akce nebo velký event – přizpůsobíme se.",
+    eventsTitle: "Zajistíme pro vás ",
+    events: ["Firemní akce", "Festivaly", "Svatby", "Soukromé oslavy", "Konference", "Rauty" ,"Narozeninové oslavy" , "A další..."],
+    eventsNote: "",
     reasonsTitle: "Proč Modrokuk",
     reasons: [
       "Domluva bez zdržování",
@@ -123,7 +123,7 @@ const siteConfigs = {
       "Servis, na který je spoleh",
       "Flexibilita podle akce",
     ],
-    galleryTitle: "Podívejte se, jak má catering vypadat.",
+    galleryTitle: "Naše galerie chutí",
     galleryText: "",
     galleryImages: [
       { src: "Catering/pexels-dmitry-sidorov-2775764-7015880.jpg", alt: "Cateringový detail z akce" },
@@ -136,10 +136,12 @@ const siteConfigs = {
       "Přesně takhle má vypadat catering. Rychlé, kvalitní, bez problémů.",
       "Skvělá domluva, perfektní realizace, jídlo na top úrovni.",
     ],
-    inquiryTitle: "Chcete catering, který nezklame?",
-    inquiryText: "Pošlete:",
+    inquiryTitle: "Máte zájem o catering?",
+    inquiryText: "",
     inquiryItems: ["typ akce", "počet lidí", "místo a termín"],
-    inquiryNote: "Ozveme se rychle. Bez zbytečných kroků.",
+    inquiryNote: "Neváhejte nás kontaktovat.",
+    inquiryImage: "pexels-novkov-visuals-34321369.jpg",
+    inquiryImageAlt: "Cateringová fotografie pro poptávku Modrokuk",
     claimsTitle: "Claimy",
     claims: [
       "Žádný průměr",
@@ -210,6 +212,8 @@ const siteConfigs = {
     inquiryText: "Na tento web lze napojit samostatný formulář nebo kontaktní workflow.",
     inquiryItems: ["typ akce", "počet lidí", "místo a termín"],
     inquiryNote: "Obsah poptávky můžeme přizpůsobit pro každou značku zvlášť.",
+    inquiryImage: "",
+    inquiryImageAlt: "",
     claimsTitle: "Claimy",
     claims: ["Dvě gastro značky", "Jeden webový základ"],
     email: "info@vas-web.cz",
@@ -312,7 +316,9 @@ const renderGallery = (targetId, items) => {
     return;
   }
 
-  target.innerHTML = (items || [])
+  const loopedItems = [...(items || []), ...(items || [])];
+
+  target.innerHTML = loopedItems
     .map(
       (item) => `
         <figure class="gallery-card">
@@ -338,6 +344,10 @@ const applyConfig = (configKey) => {
   document.documentElement.style.setProperty("--accent", config.accent);
   document.documentElement.style.setProperty("--accent-dark", config.accentDark);
   document.documentElement.style.setProperty("--bg", config.background);
+  document.documentElement.style.setProperty(
+    "--cta-bg-image",
+    config.inquiryImage ? `url("${config.inquiryImage}")` : "none"
+  );
 
   assignText("brand-name", config.brand);
   assignText("domain-badge", config.badge);
@@ -350,7 +360,6 @@ const applyConfig = (configKey) => {
   assignText("services-title", config.servicesTitle);
   assignText("events-title", config.eventsTitle);
   assignText("events-note", config.eventsNote);
-  assignText("reasons-title", config.reasonsTitle);
   assignText("gallery-title", config.galleryTitle);
   assignText("gallery-text", config.galleryText);
   assignText("inquiry-title", config.inquiryTitle);
@@ -406,7 +415,6 @@ const applyConfig = (configKey) => {
   renderParagraphs("about-text", config.aboutParagraphs || []);
   renderCards("services-list", config.services || []);
   renderCards("events-list", (config.events || []).map((item) => ({ title: item, text: "" })));
-  renderCards("reasons-list", (config.reasons || []).map((item) => ({ title: item, text: "" })));
   renderInquiryItems("inquiry-items", config.inquiryItems || []);
   renderGallery("gallery-grid", config.galleryImages || []);
 

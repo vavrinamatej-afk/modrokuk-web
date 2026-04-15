@@ -253,7 +253,7 @@ a {
 .contact-hero__title {
   margin-top: 18px;
   font-size: clamp(3rem, 6vw, 5.6rem);
-  line-height: 0.94;
+  line-height: 1.04;
 }
 
 .hero__text,
@@ -392,9 +392,44 @@ a {
   grid-template-columns: 1fr;
 }
 
+.feature-panel--cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-panel--cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--cta-bg-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+}
+
+.feature-panel--cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.62));
+}
+
 .feature-panel__text,
 .feature-panel__visual {
   padding: 34px;
+}
+
+.feature-panel__text--centered {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-panel__text--centered .feature-panel__copy,
+.feature-panel__text--centered .inquiry-panel__note {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 38ch;
 }
 
 .feature-panel__visual {
@@ -464,31 +499,44 @@ a {
 
 .gallery-panel {
   margin-top: 28px;
-  padding: 30px;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 24px;
   background: var(--surface-strong);
+  overflow: hidden;
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: gallery-slide-right 32s linear infinite;
 }
 
 .gallery-card {
+  flex: 0 0 auto;
   overflow: hidden;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.72);
+  border-radius: 0;
+  border: 0;
+  background: transparent;
 }
 
 .gallery-card img {
   display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
+}
+
+@keyframes gallery-slide-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .claim-list {
@@ -610,10 +658,6 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .feature-panel--cta {
     grid-template-columns: 1fr;
   }
@@ -654,7 +698,6 @@ a {
   .feature-panel,
   .cards,
   .cards--compact,
-  .gallery-grid,
   .inquiry-form,
   .inquiry-form--full {
     grid-template-columns: 1fr;
@@ -791,6 +834,12 @@ a {
   .feature-panel__preview {
     min-height: 220px;
   }
+
+  .gallery-card img {
+    width: 180px;
+    height: 180px;
+  }
+
 
   .section__footnote {
     width: 100%;
