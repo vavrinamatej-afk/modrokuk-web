@@ -115,7 +115,7 @@ a {
 
 .brand-lockup {
   gap: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.04em;
 }
 
@@ -196,7 +196,7 @@ a {
   background: transparent;
   color: rgba(255, 255, 255, 0.82);
   font: inherit;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -254,6 +254,7 @@ a {
   margin-top: 18px;
   font-size: clamp(3rem, 6vw, 5.6rem);
   line-height: 1.04;
+  font-weight: 600;
 }
 
 .hero__text,
@@ -301,7 +302,7 @@ a {
   padding: 0 22px;
   border-radius: 999px;
   border: 1px solid transparent;
-  font-weight: 700;
+  font-weight: 600;
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
@@ -347,6 +348,7 @@ a {
   margin-top: 10px;
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.04;
+  font-weight: 600;
 }
 
 .section__copy {
@@ -375,7 +377,7 @@ a {
   max-width: 100%;
   padding: 18px 20px;
   color: var(--text);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -505,6 +507,7 @@ a {
 
 .info-card h3 {
   font-size: 1.18rem;
+  font-weight: 500;
 }
 
 .info-card p {
@@ -525,7 +528,7 @@ a {
   align-items: center;
   gap: 0;
   width: max-content;
-  animation: gallery-slide-right 32s linear infinite;
+  animation: gallery-auto-scroll 28s linear infinite;
 }
 
 .gallery-card {
@@ -534,6 +537,7 @@ a {
   border-radius: 0;
   border: 0;
   background: transparent;
+  scroll-snap-align: start;
 }
 
 .gallery-card img {
@@ -543,13 +547,13 @@ a {
   object-fit: cover;
 }
 
-@keyframes gallery-slide-right {
+@keyframes gallery-auto-scroll {
   from {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 }
 
@@ -598,7 +602,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--accent-dark);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .contact-summary__item p,
@@ -642,7 +646,7 @@ a {
 }
 
 .form-field span {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .form-field input,
