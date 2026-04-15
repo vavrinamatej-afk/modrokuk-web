@@ -44,6 +44,10 @@ const siteConfigs = {
     galleryTitle: "Food truck v reálném provozu.",
     galleryText:
       "Sem můžeme doplnit fotky trucku, výdeje, detailů jídel i atmosféry z akcí.",
+    galleryImages: [
+      { src: "assets/do1ruky-hero.svg", alt: "Ilustrační náhled Do1Ruky" },
+      { src: "assets/do1ruky-hero.svg", alt: "Ilustrační náhled Do1Ruky" },
+    ],
     referencesTitle: "Reference",
     references: [
       "Skvělé řešení na firemní den, rychlý servis a super atmosféra.",
@@ -78,7 +82,7 @@ const siteConfigs = {
     brand: "Modrokuk",
     badge: "Aktivní doména: modrokuk.cz",
     eyebrow: "Modrokuk Catering",
-    headline: "Žádný průměr. Jen jídlo, které si lidi zapamatují.",
+    headline: "Žádný průměr. Jen jídlo, které si hosté zapamatují.",
     heroText:
       "Postaráme se o catering, který funguje – rychle, bez chaosu a na úrovni.",
     primaryCta: "Nezávazná poptávka",
@@ -88,9 +92,10 @@ const siteConfigs = {
       "Jídlo, servis i organizace tak, aby akce běžela hladce a hosté si catering opravdu zapamatovali.",
     aboutTitle: "Nejsme klasický catering.",
     aboutParagraphs: [
-      "Nehrajeme si na něco, co nejsme.",
-      "Děláme jídlo, které chutná, vypadá dobře a hlavně funguje na akci. Žádné zdržování, žádné kompromisy.",
-      "Když má být akce dobrá, jídlo musí být top. A přesně to dodáváme.",
+      "Nezdržujeme, nekomplikujeme.",
+      "Děláme jídlo, které chutná, dobře vypadá a hlavně funguje na akci.",
+      "Když má být akce dobrá, jídlo musí být bez kompromisů.",
+      "A přesně to dodáváme.",
     ],
     servicesTitle: "Co děláme",
     services: [
@@ -100,35 +105,41 @@ const siteConfigs = {
       },
       {
         title: "BBQ & grill",
-        text: "Maso, které má chuť. Žádné suché kecy, ale poctivý gril.",
+        text: "Poctivé maso, žebra, steaky. Chuť, která dává smysl.",
       },
       {
         title: "Rauty",
-        text: "Čisté, přehledné, chutné. Žádný přeplácaný stůl, ale jídlo, co dává smysl.",
+        text: "Čisté, přehledné, funkční. Jídlo, které hosté opravdu chtějí jíst.",
       },
     ],
     eventsTitle: "Pro jaké akce",
     events: ["Firemní akce", "Festivaly", "Svatby", "Soukromé oslavy"],
-    eventsNote: "Malá akce nebo velký event — přizpůsobíme se.",
+    eventsNote: "Malá akce nebo velký event – přizpůsobíme se.",
     reasonsTitle: "Proč Modrokuk",
     reasons: [
       "Domluva bez zdržování",
       "Jídlo bez kompromisů",
-      "Tým, co ví, co dělá",
+      "Tým, který ví, co dělá",
       "Servis, na který je spoleh",
       "Flexibilita podle akce",
     ],
-    galleryTitle: "Podívej se, jak má catering vypadat.",
-    galleryText: "Ne fotky z katalogu. Reálné akce.",
+    galleryTitle: "Podívejte se, jak má catering vypadat.",
+    galleryText: "Reálné akce. Reálné jídlo.",
+    galleryImages: [
+      { src: "Catering/pexels-dmitry-sidorov-2775764-7015880.jpg", alt: "Cateringový detail z akce" },
+      { src: "Catering/pexels-mariia-ivanova-449384027-19123614.jpg", alt: "Servírované občerstvení na eventu" },
+      { src: "Catering/pexels-nadezhda-moryak-4409303.jpg", alt: "Detail jídla z cateringu Modrokuk" },
+      { src: "Catering/pexels-nunakurt-34236086.jpg", alt: "Street food porce z nabídky cateringu" },
+    ],
     referencesTitle: "Reference",
     references: [
-      "Přesně takhle má vypadat catering. Rychlé, dobré, bez problémů.",
-      "Žádné řeči, prostě to odmakali a jídlo bylo top.",
+      "Přesně takhle má vypadat catering. Rychlé, kvalitní, bez problémů.",
+      "Skvělá domluva, perfektní realizace, jídlo na top úrovni.",
     ],
-    inquiryTitle: "Chceš catering, co nebude průser?",
-    inquiryText: "Pošli nám pár základních informací.",
+    inquiryTitle: "Chcete catering, který nezklame?",
+    inquiryText: "Pošlete:",
     inquiryItems: ["typ akce", "počet lidí", "místo a termín"],
-    inquiryNote: "Ozveme se rychle. Bez zbytečných keců.",
+    inquiryNote: "Ozveme se rychle. Bez zbytečných kroků.",
     claimsTitle: "Claimy",
     claims: [
       "Žádný průměr",
@@ -145,8 +156,8 @@ const siteConfigs = {
       "Catering Modrokuk připraví nabídku na míru pro firemní event, svatbu, konferenci i privátní oslavu. Napište nám základní představu a ozveme se zpět.",
     contactPageHeading: "Kontakt pro catering Modrokuk",
     contactServiceDetail: "Catering na míru, kompletní servis a občerstvení pro různé typy akcí.",
-    heroImage: "pexels-sejio402-29226723.jpg",
-    heroImageAlt: "Cateringový stůl pro Modrokuk",
+    heroImage: "pexels-novkov-visuals-34321380.jpg",
+    heroImageAlt: "Hero fotografie cateringu Modrokuk",
     featureImage: "Louka-29.jpg",
     featureImageAlt: "Fotografie cateringu Modrokuk",
     accent: "#0e6f8a",
@@ -189,6 +200,10 @@ const siteConfigs = {
     ],
     galleryTitle: "Galerie",
     galleryText: "Sem přijdou reálné fotografie z akcí a detailů jídel.",
+    galleryImages: [
+      { src: "Catering/pexels-sejio402-33691786.jpg", alt: "Ukázková cateringová fotografie" },
+      { src: "Catering/pexels-nadezhda-moryak-4409303.jpg", alt: "Ukázková BBQ fotografie" },
+    ],
     referencesTitle: "Reference",
     references: ["Sem doplníme reference zákazníků pro konkrétní značku."],
     inquiryTitle: "Poptávka",
@@ -290,6 +305,23 @@ const renderInquiryItems = (targetId, items) => {
   `;
 };
 
+const renderGallery = (targetId, items) => {
+  const target = document.getElementById(targetId);
+  if (!target) {
+    return;
+  }
+
+  target.innerHTML = (items || [])
+    .map(
+      (item) => `
+        <figure class="gallery-card">
+          <img src="${item.src}" alt="${item.alt}">
+        </figure>
+      `
+    )
+    .join("");
+};
+
 const applyConfig = (configKey) => {
   const config = siteConfigs[configKey];
   if (!config) {
@@ -314,7 +346,6 @@ const applyConfig = (configKey) => {
   assignText("reasons-title", config.reasonsTitle);
   assignText("gallery-title", config.galleryTitle);
   assignText("gallery-text", config.galleryText);
-  assignText("references-title", config.referencesTitle);
   assignText("inquiry-title", config.inquiryTitle);
   assignText("inquiry-text", config.inquiryText);
   assignText("inquiry-note", config.inquiryNote);
@@ -369,8 +400,8 @@ const applyConfig = (configKey) => {
   renderCards("services-list", config.services || []);
   renderCards("events-list", (config.events || []).map((item) => ({ title: item, text: "" })));
   renderCards("reasons-list", (config.reasons || []).map((item) => ({ title: item, text: "" })));
-  renderCards("references-list", (config.references || []).map((item) => ({ title: `"${item}"`, text: "" })));
   renderInquiryItems("inquiry-items", config.inquiryItems || []);
+  renderGallery("gallery-grid", config.galleryImages || []);
 
   setHrefIfExists('[data-brand-link="contact"]', `kontakt.html?brand=${encodeURIComponent(configKey)}`);
   setHrefIfExists('[data-brand-link="home"]', `index.html?brand=${encodeURIComponent(configKey)}`);
