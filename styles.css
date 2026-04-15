@@ -383,6 +383,10 @@ a {
   box-shadow: 0 12px 24px rgba(24, 33, 39, 0.06);
 }
 
+.section__footnote:empty {
+  display: none;
+}
+
 .feature-panel {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;

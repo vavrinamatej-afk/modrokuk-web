@@ -344,6 +344,14 @@ const renderGallery = (targetId, items) => {
     .join("");
 };
 
+const getResponsiveEvents = (configKey, events) => {
+  if (configKey === "modrokuk.cz" && window.innerWidth <= 640) {
+    return ["Firemní akce", "Festivaly", "Svatby"];
+  }
+
+  return events || [];
+};
+
 const applyConfig = (configKey) => {
   const config = siteConfigs[configKey];
   if (!config) {
@@ -429,7 +437,10 @@ const applyConfig = (configKey) => {
 
   renderParagraphs("about-text", config.aboutParagraphs || []);
   renderCards("services-list", config.services || []);
-  renderCards("events-list", (config.events || []).map((item) => ({ title: item, text: "" })));
+  renderCards(
+    "events-list",
+    getResponsiveEvents(configKey, config.events).map((item) => ({ title: item, text: "" }))
+  );
   renderInquiryItems("inquiry-items", config.inquiryItems || []);
   renderGallery("gallery-grid", config.galleryImages || []);
 
@@ -464,3 +475,10 @@ if (brandButtons.do1ruky) {
 if (brandButtons.modrokuk) {
   brandButtons.modrokuk.addEventListener("click", () => applyConfig("modrokuk.cz"));
 }
+
+window.addEventListener("resize", () => {
+  const activeConfigKey = brandButtons.modrokuk?.classList.contains("is-active")
+    ? "modrokuk.cz"
+    : "do1ruky.cz";
+  applyConfig(activeConfigKey);
+});
