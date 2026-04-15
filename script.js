@@ -158,7 +158,7 @@ const siteConfigs = {
     contactServiceDetail: "Catering na míru, kompletní servis a občerstvení pro různé typy akcí.",
     heroImage: "pexels-novkov-visuals-34321380.jpg",
     heroImageAlt: "Hero fotografie cateringu Modrokuk",
-    featureImage: "Catering/catering3.jpg",
+    featureImage: "catering3.jpg",
     featureImageAlt: "Fotografie cateringu Modrokuk",
     accent: "#0e6f8a",
     accentDark: "#0a4f63",
@@ -233,6 +233,7 @@ const siteConfigs = {
 const normalizedHost = window.location.hostname.toLowerCase();
 const rawConfig = siteConfigs[normalizedHost] || siteConfigs.default;
 const hostConfig = rawConfig.aliasOf ? siteConfigs[rawConfig.aliasOf] : rawConfig;
+const persistedBrandKey = window.localStorage.getItem("selectedBrandKey");
 const brandButtons = {
   do1ruky: document.getElementById("switch-do1ruky"),
   modrokuk: document.getElementById("switch-modrokuk"),
@@ -328,6 +329,12 @@ const applyConfig = (configKey) => {
     return;
   }
 
+  window.localStorage.setItem("selectedBrandKey", configKey);
+
+  const currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.set("brand", configKey);
+  window.history.replaceState({}, "", currentUrl.toString());
+
   document.documentElement.style.setProperty("--accent", config.accent);
   document.documentElement.style.setProperty("--accent-dark", config.accentDark);
   document.documentElement.style.setProperty("--bg", config.background);
@@ -410,12 +417,20 @@ const applyConfig = (configKey) => {
 };
 
 const brandFromQuery = new URLSearchParams(window.location.search).get("brand");
-const initialConfigKey =
-  brandFromQuery && siteConfigs[brandFromQuery] && !siteConfigs[brandFromQuery].aliasOf
-    ? brandFromQuery
-    : hostConfig.brand === "Modrokuk"
-      ? "modrokuk.cz"
-      : "do1ruky.cz";
+
+let initialConfigKey = "do1ruky.cz";
+
+if (brandFromQuery && siteConfigs[brandFromQuery] && !siteConfigs[brandFromQuery].aliasOf) {
+  initialConfigKey = brandFromQuery;
+} else if (normalizedHost === "modrokuk.cz" || normalizedHost === "www.modrokuk.cz") {
+  initialConfigKey = "modrokuk.cz";
+} else if (normalizedHost === "do1ruky.cz" || normalizedHost === "www.do1ruky.cz") {
+  initialConfigKey = "do1ruky.cz";
+} else if (persistedBrandKey && siteConfigs[persistedBrandKey] && !siteConfigs[persistedBrandKey].aliasOf) {
+  initialConfigKey = persistedBrandKey;
+} else if (hostConfig.brand === "Modrokuk") {
+  initialConfigKey = "modrokuk.cz";
+}
 
 applyConfig(initialConfigKey);
 
