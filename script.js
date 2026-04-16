@@ -42,11 +42,13 @@ const siteConfigs = {
       "Pohodová obsluha a flexibilita",
     ],
     galleryTitle: "Food truck v reálném provozu.",
-    galleryText:
-      "Sem můžeme doplnit fotky trucku, výdeje, detailů jídel i atmosféry z akcí.",
+    galleryText: "",
     galleryImages: [
-      { src: "assets/do1ruky-hero.svg", alt: "Ilustrační náhled Do1Ruky" },
-      { src: "assets/do1ruky-hero.svg", alt: "Ilustrační náhled Do1Ruky" },
+      { src: "galerie do1ruky/Arroz con Frijoles (vegan).jpg", alt: "Arroz con Frijoles vegan z nabídky Do1Ruky" },
+      { src: "galerie do1ruky/Chesse tortilla.jpg", alt: "Cheese tortilla z nabídky Do1Ruky" },
+      { src: "galerie do1ruky/Chicken wrap.jpg", alt: "Chicken wrap z nabídky Do1Ruky" },
+      { src: "galerie do1ruky/chilli con carne.jpg", alt: "Chilli con carne z nabídky Do1Ruky" },
+      { src: "galerie do1ruky/Royal beef cheese.jpg", alt: "Royal beef cheese z nabídky Do1Ruky" },
     ],
     referencesTitle: "Reference",
     references: [
@@ -61,14 +63,14 @@ const siteConfigs = {
     claims: ["Food truck na akce", "Rychle. Poctivě. Do1Ruky", "Jídlo, co baví"],
     email: "info@do1ruky.cz",
     phone: "+420 000 000 001",
-    brandLogo: "",
-    brandLogoAlt: "",
+    brandLogo: "logo do jedny ruky.jpg",
+    brandLogoAlt: "Logo Do1Ruky",
     contactPageText:
       "Food truck Do1Ruky je ideální pro festivaly, firemní dny, svatby i soukromé oslavy. Ozvěte se a domluvíme termín i nabídku.",
     contactPageHeading: "Kontakt pro food truck Do1Ruky",
     contactServiceDetail: "Food truck na akce, festivaly, firemní dny a soukromé oslavy.",
-    heroImage: "assets/do1ruky-hero.svg",
-    heroImageAlt: "Ilustrační grafika food trucku Do1Ruky",
+    heroImage: "do1ruky uvodní foto.jpg",
+    heroImageAlt: "Úvodní fotografie Do1Ruky",
     featureImage: "assets/do1ruky-hero.svg",
     featureImageAlt: "Náhled služby Do1Ruky",
     accent: "#d96f32",
@@ -343,7 +345,8 @@ const renderGallery = (targetId, items) => {
     return;
   }
 
-  const loopedItems = [...(items || []), ...(items || [])];
+  const galleryItems = items || [];
+  const loopedItems = [...galleryItems, ...galleryItems];
 
   target.innerHTML = loopedItems
     .map(

@@ -129,12 +129,12 @@ a {
 
 .brand-lockup__logo {
   display: none;
-  width: 52px;
-  height: 52px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
-  padding: 6px;
+  padding: 8px;
 }
 
 .brand-lockup.has-logo .brand-lockup__logo {
@@ -355,6 +355,34 @@ a {
   margin-top: 20px;
 }
 
+.section__panel {
+  margin-top: 28px;
+  padding: 30px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 42px rgba(24, 33, 39, 0.06);
+}
+
+.section__panel--warm {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.72)),
+    linear-gradient(135deg, rgba(217, 111, 50, 0.14), rgba(217, 111, 50, 0.06));
+}
+
+.section__panel--cool {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.72)),
+    linear-gradient(135deg, rgba(14, 111, 138, 0.12), rgba(14, 111, 138, 0.05));
+}
+
+.section__panel .cards {
+  margin-top: 0;
+}
+
+.section__panel .section__footnote {
+  background: rgba(255, 255, 255, 0.66);
+}
+
 .section__copy p {
   margin: 0 0 15px;
 }
@@ -525,26 +553,32 @@ a {
 
 .gallery-grid {
   display: flex;
-  align-items: center;
-  gap: 0;
+  align-items: stretch;
+  gap: 18px;
   width: max-content;
+  padding: 24px;
   animation: gallery-auto-scroll 28s linear infinite;
 }
 
 .gallery-card {
-  flex: 0 0 auto;
+  flex: 0 0 320px;
   overflow: hidden;
-  border-radius: 0;
-  border: 0;
-  background: transparent;
-  scroll-snap-align: start;
+  margin: 0;
+  padding: 12px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 24px rgba(24, 33, 39, 0.06);
 }
 
 .gallery-card img {
   display: block;
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #fff;
 }
 
 @keyframes gallery-auto-scroll {
@@ -553,7 +587,7 @@ a {
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 9px));
   }
 }
 
@@ -776,8 +810,8 @@ a {
   }
 
   .brand-lockup__logo {
-    width: 42px;
-    height: 42px;
+    width: 58px;
+    height: 58px;
   }
 
   .brand-lockup {
@@ -840,6 +874,10 @@ a {
     padding-top: 18px;
   }
 
+  .section__panel {
+    padding: 24px;
+  }
+
   .section__title {
     font-size: clamp(1.7rem, 8vw, 2.4rem);
   }
@@ -854,8 +892,11 @@ a {
   }
 
   .gallery-card img {
-    width: 180px;
-    height: 180px;
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery-card {
+    flex-basis: 240px;
   }
 
 
