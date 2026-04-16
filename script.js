@@ -87,7 +87,7 @@ const siteConfigs = {
       "Užijte si svou akci, o zbytek se postaráme my.",
     primaryCta: "Nezávazná poptávka",
     primaryCtaHref: "kontakt.html?brand=modrokuk.cz#formular",
-    cardTitle: "Kompletní catering bez zdržování",
+    cardTitle: "Na čem si zakládáme",
     cardText: `
       <ul class="feature-panel__list">
         <li><strong>Preciznost:</strong> Dohlížíme na vše od chuti jídla až po jeho servírování. Nic nenecháváme náhodě.</li>
@@ -100,24 +100,36 @@ const siteConfigs = {
     `,
     aboutTitle: "O nás",
     aboutParagraphs: [
-      "Jsme profesionálové, kteří gastronomií žijí. Naše cesta začala před více než 20 lety v prostředí restaurací, kde jsme se naučili, že v detailu je rozdíl.",
-      "Dnes tyto zkušenosti přenášíme do světa cateringu, kde klademe důraz na dvě věci: špičkovou kvalitu surovin a precizní skladbu každého chodu.",
-      "Nehledáme zkratky. Každé menu sestavujeme tak, aby dávalo smysl chutí i vzhledem.",
-      "Chceme pro své klienty to nejlepší – od prvního kontaktu až po poslední sousto na vašem talíři. Vaše spokojenost je pro nás závazek, který plníme s maximálním nasazením.",
+      "Jsme profesionálové, kteří gastronomií žijí. Naše cesta začala před více než 20 lety v prostředí restaurací, kde jsme se naučili, že v detailu je rozdíl. Dnes tyto zkušenosti přenášíme do světa cateringu, kde klademe důraz na dvě věci: špičkovou kvalitu surovin a precizní skladbu každého chodu.",
+      "Nehledáme zkratky. Každé menu sestavujeme tak, aby dávalo smysl chutí i vzhledem. Chceme pro své klienty to nejlepší – od prvního kontaktu až po poslední sousto na vašem talíři. Vaše spokojenost je pro nás závazek, který plníme s maximálním nasazením.",
+    ],
+    mobileCardText: `
+      <ul class="feature-panel__list">
+        <li><strong>Preciznost:</strong> Ladíme chuť i servis. Nic nenecháváme náhodě.</li>
+        <li><strong>Spolehlivost:</strong> Stovky akcí za námi. Vše klapne na minutu.</li>
+        <li><strong>Rychlé jednání:</strong> Reagujeme obratem. Domluva bez zbytečností.</li>
+        <li><strong>Vlastní menu:</strong> Nasloucháme vám. Jídlo i servis podle vašich představ.</li>
+        <li><strong>Kvalitní suroviny:</strong> Nešetříme na základu. Vaříme jen z čerstvého.</li>
+        <li><strong>Lidský přístup:</strong> Jednáme na rovinu, profesionálně a s úsměvem.</li>
+      </ul>
+    `,
+    mobileAboutParagraphs: [
+      "Gastronomii se věnujeme přes 20 let. Zkušenosti z restaurací teď přenášíme do našeho cateringu, kde stavíme na poctivých surovinách a precizním provedení.",
+      "Nehledáme zkratky. Menu sestavujeme tak, aby dávalo smysl chutí i vzhledem. Naším cílem je špičkový servis od první schůzky až po poslední sousto na talíři.",
     ],
     servicesTitle: "Co děláme",
     services: [
       {
         title: "Street food catering",
-        text: "Burgery, hranolky, hotdogy, wrapy. Rychlé, výrazné, bez zbytečností.",
+        text: "Klasika z ulice v nejlepší kvalitě. Burgery, hotdogy a wrapy s výraznou chutí, bez zbytečností a zbytečného čekání.",
       },
       {
         title: "BBQ & grill",
-        text: "Poctivé maso, žebra, steaky. Chuť, která dává smysl.",
+        text: "Základem je pro nás poctivý kus masa – jen oheň, kouř a maso, jak má být.",
       },
       {
         title: "Rauty",
-        text: "Čisté, přehledné, funkční. Jídlo, které hosté opravdu chtějí jíst.",
+        text: "Čistý a funkční servis, kde hraje hlavní roli kvalita. Připravujeme jídlo, které lidem chutná a na nic si nehraje.",
       },
     ],
     eventsTitle: "Zajistíme pro vás ",
@@ -352,8 +364,25 @@ const getResponsiveEvents = (configKey, events) => {
   return events || [];
 };
 
+const getResponsiveConfig = (configKey) => {
+  const baseConfig = siteConfigs[configKey];
+  if (!baseConfig) {
+    return null;
+  }
+
+  if (configKey === "modrokuk.cz" && window.innerWidth <= 640) {
+    return {
+      ...baseConfig,
+      cardText: baseConfig.mobileCardText || baseConfig.cardText,
+      aboutParagraphs: baseConfig.mobileAboutParagraphs || baseConfig.aboutParagraphs,
+    };
+  }
+
+  return baseConfig;
+};
+
 const applyConfig = (configKey) => {
-  const config = siteConfigs[configKey];
+  const config = getResponsiveConfig(configKey);
   if (!config) {
     return;
   }
