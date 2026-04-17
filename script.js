@@ -3,12 +3,12 @@ const siteConfigs = {
     brand: "Do1Ruky",
     badge: "Aktivní doména: do1ruky.cz",
     eyebrow: "Food truck na akce",
-    headline: "Náš food truck a jeho cesta k vám",
+    headline: "Váš event, náš food truck",
     heroText:
-      "Vezeme vám zážitek",
+      "Do1Ruky přiveze styl a skvělé jídlo přímo na vaši akci",
     primaryCta: "Rezervovat food truck",
     primaryCtaHref: "kontakt.html?brand=do1ruky.cz#formular",
-    cardTitle: "Mobilní gastro zážitek přímo na místě",
+    cardTitle: "Vezeme vám zážitek",
     cardText: `
       <ul class="feature-panel__list">
         <li><strong>Kvalita:</strong> Nenabízíme fast food, ale plnohodnotný gastronomický zážitek, který svou kvalitou obstojí vedle kamenné restaurace. Stavíme na prvotřídních surovinách a poctivé přípravě.</li>
@@ -18,7 +18,7 @@ const siteConfigs = {
         <li><strong>Přátelská atmosféra:</strong> Nejsme jen obsluha. Přivítáme vás s úsměvem a energií, která dotváří příjemnou a pohodovou atmosféru.</li>
       </ul>
     `,
-    aboutTitle: "Food truck, který přijede za lidmi",
+    aboutTitle: "Náš food truck a jeho cesta k vám",
     aboutParagraphs: [
       "Všechno to začalo chutí dělat street food jinak. Chtěli jsme svobodu, kvalitu a možnost být tam, kde se lidé baví.",
       "A tak vzniklo Do1Ruky – koncept postavený na poctivém jídle, které za vámi přijede kamkoliv. Nezáleží na tom, jestli je to zapadlý festival nebo firemní dvůr, náš food truck přiveze styl a zážitek přímo do vašich rukou.",

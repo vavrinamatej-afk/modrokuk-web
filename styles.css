@@ -379,8 +379,8 @@ a {
 
 .section__panel--photo.section__panel--warm {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.44)),
-    linear-gradient(135deg, rgba(217, 111, 50, 0.14), rgba(217, 111, 50, 0.05)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.975), rgba(255, 255, 255, 0.94)),
+    linear-gradient(135deg, rgba(217, 111, 50, 0.06), rgba(217, 111, 50, 0.02)),
     var(--panel-bg-image, none);
   background-size: auto, auto, cover;
   background-position: center, center, center;
@@ -388,8 +388,8 @@ a {
 
 .section__panel--photo.section__panel--cool {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.44)),
-    linear-gradient(135deg, rgba(14, 111, 138, 0.14), rgba(14, 111, 138, 0.05)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.975), rgba(255, 255, 255, 0.94)),
+    linear-gradient(135deg, rgba(217, 111, 50, 0.06), rgba(217, 111, 50, 0.02)),
     var(--panel-bg-image, none);
   background-size: auto, auto, cover;
   background-position: center, center, center;
