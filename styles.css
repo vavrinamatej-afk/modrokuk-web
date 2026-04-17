@@ -543,8 +543,13 @@ a {
 
 .contact-summary__cta {
   display: flex;
+  width: 100%;
   justify-content: center;
   margin-top: 32px;
+}
+
+#contact-cta {
+  margin-inline: auto;
 }
 
 .feature-panel__preview {
@@ -767,6 +772,11 @@ a {
   grid-column: 1 / -1;
 }
 
+.inquiry-form > .button {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 @media (max-width: 1080px) {
   .feature-panel,
   .cards,
@@ -929,7 +939,7 @@ a {
   }
 
   .contact-summary__item {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 6px;
   }
 
