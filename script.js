@@ -82,7 +82,7 @@ const siteConfigs = {
       "Food truck Do1Ruky je ideální pro festivaly, firemní dny, svatby i soukromé oslavy. Ozvěte se a domluvíme termín i nabídku.",
     contactPageHeading: "Kontakt pro food truck Do1Ruky",
     contactServiceDetail: "Food truck na akce, festivaly, firemní dny a soukromé oslavy.",
-    heroImage: "do1ruky uvodní foto.jpg",
+    heroImage: "image000000.jpeg",
     heroImageAlt: "Úvodní fotografie Do1Ruky",
     featureImage: "IMG_8823.png",
     featureImageAlt: "Mobilní gastro zážitek Do1Ruky na místě",
