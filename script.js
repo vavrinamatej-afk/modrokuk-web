@@ -74,13 +74,13 @@ const siteConfigs = {
     inquiryImageAlt: "Food truck Do1Ruky pro poptávkový box",
     claimsTitle: "Claimy značky",
     claims: ["Food truck na akce", "Rychle. Poctivě. Do1Ruky", "Jídlo, co baví"],
-    email: "info@do1ruky.cz",
-    phone: "+420 000 000 001",
+    email: "info@modrokuk.cz",
+    phone: "+420603434244",
     brandLogo: "logo do jedny ruky.jpg",
     brandLogoAlt: "Logo Do1Ruky",
     contactPageText:
       "Food truck Do1Ruky je ideální pro festivaly, firemní dny, svatby i soukromé oslavy. Ozvěte se a domluvíme termín i nabídku.",
-    contactPageHeading: "Kontakt pro food truck Do1Ruky",
+    contactPageHeading: "Kontakt",
     contactServiceDetail: "Food truck na akce, festivaly, firemní dny a soukromé oslavy.",
     heroImage: "image000000.jpeg",
     heroImageAlt: "Úvodní fotografie Do1Ruky",
@@ -188,12 +188,12 @@ const siteConfigs = {
       "Rychlé. Poctivé. Modrokuk",
     ],
     email: "info@modrokuk.cz",
-    phone: "+420 000 000 002",
+    phone: "+420603434244",
     brandLogo: "FB_Ikona_Modrokuk.jpg",
     brandLogoAlt: "Logo Modrokuk",
     contactPageText:
       "Catering Modrokuk připraví nabídku na míru pro firemní event, svatbu, konferenci i privátní oslavu. Napište nám základní představu a ozveme se zpět.",
-    contactPageHeading: "Kontakt pro catering Modrokuk",
+    contactPageHeading: "Kontakt",
     contactServiceDetail: "Catering na míru, kompletní servis a občerstvení pro různé typy akcí.",
     heroImage: "pexels-novkov-visuals-34321380.jpg",
     heroImageAlt: "Hero fotografie cateringu Modrokuk",
@@ -497,8 +497,6 @@ const applyConfig = (configKey) => {
   assignText("contact-phone", config.phone);
   assignText("contact-page-text", config.contactPageText);
   assignText("contact-page-heading", config.contactPageHeading);
-  assignText("contact-email-detail", config.email);
-  assignText("contact-phone-detail", config.phone);
   assignText("contact-service-detail", config.contactServiceDetail);
   assignText("primary-cta", config.primaryCta);
 
