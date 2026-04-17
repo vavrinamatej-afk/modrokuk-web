@@ -802,12 +802,18 @@ a {
 
   .hero,
   .hero__stage {
-    min-height: 520px;
+    min-height: 480px;
   }
 
   .hero--contact,
   .hero__stage--contact {
     min-height: 420px;
+  }
+
+  .hero__image--bg {
+    object-fit: contain;
+    object-position: center top;
+    background: #111418;
   }
 
   .hero__badge {
