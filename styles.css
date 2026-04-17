@@ -761,6 +761,24 @@ a {
     padding: 24px;
   }
 
+  .feature-panel__visual {
+    min-height: 320px;
+  }
+
+  .feature-panel__preview {
+    min-height: 320px;
+    object-position: center;
+  }
+
+  .feature-panel--cta::before {
+    background-position: center;
+    opacity: 0.38;
+  }
+
+  .feature-panel--cta::after {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.72));
+  }
+
   .hero__copy h1,
   .contact-hero__title {
     font-size: clamp(2.6rem, 9vw, 4.2rem);
@@ -779,7 +797,7 @@ a {
 
   .hero,
   .hero__stage {
-    min-height: 560px;
+    min-height: 520px;
   }
 
   .hero--contact,
@@ -820,7 +838,7 @@ a {
 
   .hero__copy--centered {
     width: 100%;
-    padding: 10px 0 26px;
+    padding: 10px 0 22px;
   }
 
   .hero__copy h1,
@@ -865,6 +883,10 @@ a {
     padding: 18px;
   }
 
+  .feature-panel__visual {
+    min-height: 260px;
+  }
+
   .section,
   .feature-panel {
     margin-top: 18px;
@@ -888,7 +910,18 @@ a {
   }
 
   .feature-panel__preview {
-    min-height: 220px;
+    min-height: 260px;
+    border-radius: 18px;
+    object-position: center;
+  }
+
+  .feature-panel--cta::before {
+    background-position: center;
+    opacity: 0.32;
+  }
+
+  .feature-panel--cta::after {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.76));
   }
 
   .gallery-card img {
@@ -898,7 +931,6 @@ a {
   .gallery-card {
     flex-basis: 240px;
   }
-
 
   .section__footnote {
     width: 100%;
