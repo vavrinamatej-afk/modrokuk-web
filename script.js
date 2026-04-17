@@ -8,10 +8,17 @@ const siteConfigs = {
       "Do1Ruky přiveze styl a skvělé jídlo přímo na vaši akci",
     primaryCta: "Rezervovat food truck",
     primaryCtaHref: "kontakt.html?brand=do1ruky.cz#formular",
-    cardTitle: "Mobilní gastro zážitek na místě",
-    cardText:
-      "Na této doméně může být důraz na atmosféru akce, ukázku jídel, fotogalerii a rychlou poptávku na přistavení food trucku.",
-    aboutTitle: "Food truck, který přijede za lidmi.",
+    cardTitle: "Mobilní gastro zážitek přímo na místě",
+    cardText: `
+      <ul class="feature-panel__list">
+        <li><strong>Kvalita</strong> Nenabízíme fast food, ale plnohodnotný gastronomický zážitek, který svou kvalitou obstojí vedle kamenné restaurace. Stavíme na prvotřídních surovinách a poctivé přípravě.</li>
+        <li><strong>Šetrnost k přírodě</strong> Myslíme i na planetu. Používáme výhradně ekologické, rozložitelné nádobí a kompostovatelné příbory.</li>
+        <li><strong>Komfortní požitek</strong> Jídlo servírujeme tak, aby se dobře drželo a pohodlně jedlo. Bez nepořádku, bez kompromisů, jen čistý gurmánský zážitek.</li>
+        <li><strong>Bleskový servis</strong> Dbáme na rychlost a plynulé odbavení, abyste zbytečně neztráceli čas ve frontě.</li>
+        <li><strong>Přátelská atmosféra</strong> Nejsme jen obsluha. Přivítáme vás s úsměvem a energií, která dotváří příjemnou a pohodovou atmosféru.</li>
+      </ul>
+    `,
+    aboutTitle: "Food truck, který přijede za lidmi",
     aboutParagraphs: [
       "Všechno to začalo chutí dělat street food jinak. Chtěli jsme svobodu, kvalitu a možnost být tam, kde se lidé baví.",
       "A tak vzniklo Do1Ruky – koncept postavený na poctivém jídle, které za vámi přijede kamkoliv. Nezáleží na tom, jestli je to zapadlý festival nebo firemní dvůr, náš food truck přiveze styl a zážitek přímo do vašich rukou.",
@@ -41,7 +48,7 @@ const siteConfigs = {
       "Jídlo, které je vidět i cítit",
       "Pohodová obsluha a flexibilita",
     ],
-    galleryTitle: "Food truck v reálném provozu.",
+    galleryTitle: "Food truck v reálném provozu",
     galleryText: "",
     galleryImages: [
       { src: "galerie do1ruky/Arroz con Frijoles (vegan).jpg", alt: "Arroz con Frijoles vegan z nabídky Do1Ruky" },
@@ -202,7 +209,7 @@ const siteConfigs = {
     brand: "Společný web",
     badge: "Ukázkový režim",
     eyebrow: "Dvě gastro značky, jeden základ",
-    headline: "Jeden webový základ pro catering i food truck.",
+    headline: "Jeden webový základ pro catering i food truck",
     heroText:
       "Pokud web otevřete lokálně, zobrazí se ukázková verze. Po nasazení se obsah automaticky přepne mezi cateringovou značkou Modrokuk a food truckem Do1Ruky.",
     primaryCta: "Připravit spuštění",
@@ -210,7 +217,7 @@ const siteConfigs = {
     cardTitle: "Přepínání obsahu podle domény",
     cardText:
       "Nasazení je jednoduché: obě domény směrují na stejný hosting a web si podle adresy sám načte správnou gastro značku.",
-    aboutTitle: "Dvě značky, jeden technický základ.",
+    aboutTitle: "Dvě značky, jeden technický základ",
     aboutParagraphs: [
       "Obsah se mění podle domény, takže každá značka může mít vlastní texty, styl i obchodní zaměření.",
     ],
