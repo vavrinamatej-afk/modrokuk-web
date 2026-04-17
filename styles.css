@@ -811,9 +811,8 @@ a {
   }
 
   .hero__image--bg {
-    object-fit: contain;
-    object-position: center top;
-    background: #111418;
+    object-fit: cover;
+    object-position: center 28%;
   }
 
   .hero__badge {
