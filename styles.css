@@ -544,11 +544,15 @@ a {
 
 .gallery-panel {
   margin-top: 28px;
-  padding: 0;
+  padding: 24px 0;
   border: 1px solid var(--line);
   border-radius: 24px;
   background: var(--surface-strong);
   overflow: hidden;
+}
+
+.gallery-panel__text {
+  padding: 0 24px;
 }
 
 .gallery-grid {
@@ -556,8 +560,9 @@ a {
   align-items: stretch;
   gap: 18px;
   width: max-content;
-  padding: 24px;
+  padding: 0 24px;
   animation: gallery-auto-scroll 28s linear infinite;
+  will-change: transform;
 }
 
 .gallery-card {
@@ -883,6 +888,14 @@ a {
     padding: 18px;
   }
 
+  .gallery-panel {
+    padding: 18px 0;
+  }
+
+  .gallery-panel__text {
+    padding: 0 18px;
+  }
+
   .feature-panel__visual {
     min-height: 260px;
   }
@@ -930,6 +943,11 @@ a {
 
   .gallery-card {
     flex-basis: 240px;
+  }
+
+  .gallery-grid {
+    padding: 0 18px;
+    animation-duration: 42s;
   }
 
   .section__footnote {
