@@ -356,11 +356,13 @@ a {
 }
 
 .section__panel {
+  position: relative;
   margin-top: 28px;
   padding: 30px;
   border-radius: 28px;
   border: 1px solid var(--line);
   box-shadow: 0 18px 42px rgba(24, 33, 39, 0.06);
+  overflow: hidden;
 }
 
 .section__panel--warm {
@@ -373,6 +375,41 @@ a {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.72)),
     linear-gradient(135deg, rgba(14, 111, 138, 0.12), rgba(14, 111, 138, 0.05));
+}
+
+.section__panel--photo.section__panel--warm {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.44)),
+    linear-gradient(135deg, rgba(217, 111, 50, 0.14), rgba(217, 111, 50, 0.05)),
+    var(--panel-bg-image, none);
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+}
+
+.section__panel--photo.section__panel--cool {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.44)),
+    linear-gradient(135deg, rgba(14, 111, 138, 0.14), rgba(14, 111, 138, 0.05)),
+    var(--panel-bg-image, none);
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+}
+
+#events-panel .info-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 28px rgba(24, 33, 39, 0.08);
+}
+
+#services-panel .info-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 28px rgba(24, 33, 39, 0.08);
+}
+
+.section__panel--photo > * {
+  position: relative;
+  z-index: 1;
 }
 
 .section__panel .cards {

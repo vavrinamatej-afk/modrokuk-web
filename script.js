@@ -3,19 +3,19 @@ const siteConfigs = {
     brand: "Do1Ruky",
     badge: "Aktivní doména: do1ruky.cz",
     eyebrow: "Food truck na akce",
-    headline: "Váš event, náš food truck",
+    headline: "Náš food truck a jeho cesta k vám",
     heroText:
-      "Do1Ruky přiveze styl a skvělé jídlo přímo na vaši akci",
+      "Vezeme vám zážitek",
     primaryCta: "Rezervovat food truck",
     primaryCtaHref: "kontakt.html?brand=do1ruky.cz#formular",
     cardTitle: "Mobilní gastro zážitek přímo na místě",
     cardText: `
       <ul class="feature-panel__list">
-        <li><strong>Kvalita</strong> Nenabízíme fast food, ale plnohodnotný gastronomický zážitek, který svou kvalitou obstojí vedle kamenné restaurace. Stavíme na prvotřídních surovinách a poctivé přípravě.</li>
-        <li><strong>Šetrnost k přírodě</strong> Myslíme i na planetu. Používáme výhradně ekologické, rozložitelné nádobí a kompostovatelné příbory.</li>
-        <li><strong>Komfortní požitek</strong> Jídlo servírujeme tak, aby se dobře drželo a pohodlně jedlo. Bez nepořádku, bez kompromisů, jen čistý gurmánský zážitek.</li>
-        <li><strong>Bleskový servis</strong> Dbáme na rychlost a plynulé odbavení, abyste zbytečně neztráceli čas ve frontě.</li>
-        <li><strong>Přátelská atmosféra</strong> Nejsme jen obsluha. Přivítáme vás s úsměvem a energií, která dotváří příjemnou a pohodovou atmosféru.</li>
+        <li><strong>Kvalita:</strong> Nenabízíme fast food, ale plnohodnotný gastronomický zážitek, který svou kvalitou obstojí vedle kamenné restaurace. Stavíme na prvotřídních surovinách a poctivé přípravě.</li>
+        <li><strong>Šetrnost k přírodě:</strong> Myslíme i na planetu. Používáme výhradně ekologické, rozložitelné nádobí a kompostovatelné příbory.</li>
+        <li><strong>Komfortní požitek:</strong> Jídlo servírujeme tak, aby se dobře drželo a pohodlně jedlo. Bez nepořádku, bez kompromisů, jen čistý gurmánský zážitek.</li>
+        <li><strong>Bleskový servis:</strong> Dbáme na rychlost a plynulé odbavení, abyste zbytečně neztráceli čas ve frontě.</li>
+        <li><strong>Přátelská atmosféra:</strong> Nejsme jen obsluha. Přivítáme vás s úsměvem a energií, která dotváří příjemnou a pohodovou atmosféru.</li>
       </ul>
     `,
     aboutTitle: "Food truck, který přijede za lidmi",
@@ -133,6 +133,7 @@ const siteConfigs = {
       "Nehledáme zkratky. Menu sestavujeme tak, aby dávalo smysl chutí i vzhledem. Naším cílem je špičkový servis od první schůzky až po poslední sousto na talíři.",
     ],
     servicesTitle: "Co děláme",
+    servicesImage: "pexels-magda-ehlers-pexels-31930008.jpeg",
     services: [
       {
         title: "Street food catering",
@@ -148,6 +149,7 @@ const siteConfigs = {
       },
     ],
     eventsTitle: "Zajistíme pro vás ",
+    eventsImage: "pexels-christina99999-25436406.jpeg",
     events: ["Firemní akce", "Festivaly", "Svatby", "Soukromé oslavy", "Konference", "Rauty" ,"Narozeninové oslavy" , "A další..."],
     eventsNote: "",
     reasonsTitle: "Proč Modrokuk",
@@ -457,6 +459,22 @@ const applyConfig = (configKey) => {
     "--cta-bg-image",
     config.inquiryImage ? `url("${config.inquiryImage}")` : "none"
   );
+
+  const servicesPanel = document.getElementById("services-panel");
+  if (servicesPanel) {
+    servicesPanel.style.setProperty(
+      "--panel-bg-image",
+      config.servicesImage ? `url("${config.servicesImage}")` : "none"
+    );
+  }
+
+  const eventsPanel = document.getElementById("events-panel");
+  if (eventsPanel) {
+    eventsPanel.style.setProperty(
+      "--panel-bg-image",
+      config.eventsImage ? `url("${config.eventsImage}")` : "none"
+    );
+  }
 
   assignText("brand-name", config.brand);
   assignText("domain-badge", config.badge);
