@@ -51,14 +51,13 @@ const siteConfigs = {
     galleryTitle: "Food truck v reálném provozu",
     galleryText: "",
     galleryImages: [
-      { src: "galerie do1ruky/Arroz con Frijoles (vegan).jpg", alt: "Arroz con Frijoles vegan z nabídky Do1Ruky" },
-      { src: "galerie do1ruky/Chesse tortilla.jpg", alt: "Cheese tortilla z nabídky Do1Ruky" },
-      { src: "galerie do1ruky/Chicken wrap.jpg", alt: "Chicken wrap z nabídky Do1Ruky" },
-      { src: "galerie do1ruky/chilli con carne.jpg", alt: "Chilli con carne z nabídky Do1Ruky" },
-      { src: "galerie do1ruky/Royal beef cheese.jpg", alt: "Royal beef cheese z nabídky Do1Ruky" },
+      { src: "galerie do1ruky/tortila 1.jpg", alt: "Tortila z nabídky Do1Ruky" },
       { src: "galerie do1ruky/burger.jpg", alt: "Burger z nabídky Do1Ruky" },
+      { src: "galerie do1ruky/tortila 2.jpg", alt: "Tortila detail z nabídky Do1Ruky" },
       { src: "galerie do1ruky/krevety a takos.jpg", alt: "Krevety a tacos z nabídky Do1Ruky" },
+      { src: "galerie do1ruky/tortila 3.jpg", alt: "Servírovaná tortila z nabídky Do1Ruky" },
       { src: "galerie do1ruky/krutí burger.jpg", alt: "Krůtí burger z nabídky Do1Ruky" },
+      { src: "galerie do1ruky/tortila 4.jpg", alt: "Tortila připravená k servisu z nabídky Do1Ruky" },
       { src: "galerie do1ruky/kuřecí špíz.jpg", alt: "Kuřecí špíz z nabídky Do1Ruky" },
       { src: "galerie do1ruky/křidílka.jpg", alt: "Křidýlka z nabídky Do1Ruky" },
     ],
@@ -371,6 +370,47 @@ const renderGallery = (targetId, items) => {
       `
     )
     .join("");
+
+  const updateGalleryWidth = () => {
+    const cards = target.querySelectorAll(".gallery-card");
+    if (!cards.length) {
+      return;
+    }
+
+    const sequenceWidth = Array.from(cards)
+      .slice(0, galleryItems.length)
+      .reduce((total, card) => total + card.getBoundingClientRect().width, 0);
+
+    const gapValue = window.getComputedStyle(target).columnGap || window.getComputedStyle(target).gap || "0";
+    const gap = Number.parseFloat(gapValue) || 0;
+    const totalWidth = sequenceWidth + Math.max(galleryItems.length - 1, 0) * gap;
+    target.style.setProperty("--gallery-track-width", `${totalWidth}px`);
+  };
+
+  const images = target.querySelectorAll("img");
+  let pending = images.length;
+
+  if (!pending) {
+    updateGalleryWidth();
+    return;
+  }
+
+  images.forEach((image) => {
+    const finish = () => {
+      pending -= 1;
+      if (pending <= 0) {
+        updateGalleryWidth();
+      }
+    };
+
+    if (image.complete) {
+      finish();
+      return;
+    }
+
+    image.addEventListener("load", finish, { once: true });
+    image.addEventListener("error", finish, { once: true });
+  });
 };
 
 const getResponsiveEvents = (configKey, events) => {

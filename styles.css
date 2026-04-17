@@ -563,6 +563,7 @@ a {
   padding: 0 24px;
   animation: gallery-auto-scroll 28s linear infinite;
   will-change: transform;
+  --gallery-track-width: 0px;
 }
 
 .gallery-card {
@@ -592,7 +593,7 @@ a {
   }
 
   to {
-    transform: translateX(calc(-50% - 9px));
+    transform: translateX(calc(-1 * var(--gallery-track-width)));
   }
 }
 
